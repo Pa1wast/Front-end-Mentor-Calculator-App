@@ -156,6 +156,7 @@ body {
   border-radius: 0.75rem;
   color: hsl(221, 14%, 31%);
   padding-top: 0.5rem;
+  cursor: pointer;
 }
 
 .number,
@@ -185,6 +186,15 @@ body {
 }
 
 /* HOVER & ACTIVE states */
+.pad-button:active,
+.reset:active,
+.delete:active,
+.equals:active {
+  transform: scale(0.98);
+  transform: translateY(1px);
+  transition: all 200ms;
+  box-shadow: none;
+}
 
 .pad-button:hover,
 .pad-button:active {
@@ -362,4 +372,13 @@ body {
     grid-template-columns: repeat(4, 85px);
     grid-template-rows: repeat(5, 45px);
   }
+}
+
+/* SELECTED OPERATOR */
+[data-operator="selected"] {
+  transform: scale(0.98);
+  transform: translateY(1px);
+  transition: all 250ms;
+  box-shadow: none;
+  opacity: 0.5;
 }
